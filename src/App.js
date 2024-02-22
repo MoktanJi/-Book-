@@ -1,8 +1,8 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage/HomePage";
-import BooksPage from "./Pages/BooksPage/BooksPage";
-import BookDetailsPage from "./Pages/BookDetailsPage/BookDetailsPage";
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import HomePage from "./Pages/HomePage/HomePage"
+import BooksPage from "./Pages/BooksPage/BooksPage"
+import BookDetailsPage from "./Pages/BookDetailsPage/BookDetailsPage"
 
 
 const App = () => {

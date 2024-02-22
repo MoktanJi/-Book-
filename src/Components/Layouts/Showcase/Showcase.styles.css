@@ -26,3 +26,11 @@
     text-align: center;
     padding-bottom: 10px;
 }
+
+.showcase-content h1{
+    font-size: 3rem;
+}
+
+.showcase-content p{
+    font-size: 1.5rem;
+}

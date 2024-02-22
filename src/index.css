@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary-color: BurlyWood;
+    --primary-color-bright: DarkKhaki;
+    --white-color: white;
+
+}
+
 h1{
     font-size: 50px;
     
@@ -15,8 +22,12 @@ h1{
 }
 
 .flex{ display: flex;}
+
 .justify-center{ justify-content: center; }
 
 .justify-between{ justify-content: space-between; }
 
 .algin-center{ align-items: center; }
+
+.text-primary{ color: var(--primary-color); }
+
