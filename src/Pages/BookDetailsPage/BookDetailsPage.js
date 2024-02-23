@@ -1,10 +1,15 @@
 import React from 'react'
+import Navbar from '../../Components/Layouts/Navbar/Navbar'
+import DetailsSection from '../../Components/Layouts/DetailsSection/DetailsSection'
+import Footer from '../../Components/Layouts/Footer/Footer'
 
 const BookDetailsPage = () => {
   return (
-    <div>
-        <h1>Book Details Page</h1>
-    </div>
+    <section>
+      <Navbar darkTheme={ true }/>
+      <DetailsSection/>
+      <Footer/>
+    </section>
   )
 }
 

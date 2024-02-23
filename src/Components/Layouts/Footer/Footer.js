@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="query" className="form-label">Query:</label>
-                    <textarea className="form-input" id="query" placeholder="Write Yor Query"></textarea>
+                    <textarea className="form-input" id="query" placeholder="Write Your Query"></textarea>
                 </div>
                 <div className="form-group">
                     <a href="#" className="form-submit">Submit</a>

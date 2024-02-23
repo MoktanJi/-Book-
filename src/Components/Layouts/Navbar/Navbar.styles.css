@@ -25,5 +25,17 @@
 
 .nav-links:hover{
     color: var(--primary-color)
+}
+
+.background-dark{
+    background-color: slategray;
+}
+
+.background-transparent{
+    background-color: transparent;
+}
+
+.relative{
+    position: relative !important;
 
 }

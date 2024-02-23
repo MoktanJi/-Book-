@@ -1,0 +1,56 @@
+.detail-section-container{
+    padding-top: 3rem ;
+    padding-bottom: 3rem;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-img-container, .book-details-container{
+    width: 50%;
+}
+
+.book-img-container{
+    text-align: center;
+}
+
+.book-img-container img{
+    height: 400px;
+    border: 1px solid #ddd;
+}
+
+.book-details-container h2{
+    font-size: 1.8rem;
+}
+
+.book-details-container p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.book-description{
+    line-height: 1.5rem;
+}
+
+.book-details-container h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color-bright);
+}
+
+.cart-button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    background-color: burlywood;
+    text-decoration: none;
+    color: white;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+}
+
+.cart-button:hover{
+    background-color: var(--primary-color-bright);
+
+}
