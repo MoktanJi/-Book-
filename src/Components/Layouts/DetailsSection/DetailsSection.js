@@ -1,22 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './DetailsSection.styles.css'
-import B1 from '../../../Assets/B1.jpg'
+import { useParams } from 'react-router-dom'
+import { BookData } from '../../../Utils/BookData'
 
 const DetailsSection = () => {
+  const { id } = useParams();
+  const [Data, setBookData] = useState({});
+  
+  useEffect(() => {
+    let newData = BookData.filter((book) => book.id === parseInt(id));
+    setBookData(newData[0])
+  },[])
   return (
     <section className="detail-section-container">
        <div className="container">
             <div className="flex-container">
                 <div className="book-img-container">
-                    <img src={B1} alt="image"/>
+                    <img src={Data.book_image} alt="image"/>
                 </div>
                 <div className="book-details-container">
-                    <h2>FOURTH WING</h2>
-                    <p className="text-primary">REBECCA YARROS</p>
-                    <p className="book-description">Twenty-year-old Violet Sorrengail was supposed to enter the Scribe Quadrant, living a quiet life among books and history. Now, the commanding general—also known as her tough-as-talons mother—has ordered Violet to join the hundreds of candidates striving to become the elite of Navarre: dragon riders.</p>
-                    <p><b>Langauge</b>: English</p>
-
-                    <h3>Rs. 2,471.17</h3>
+                    <h2>{Data.book_name}</h2>
+                    <p className="text-primary">{Data.author_name}</p>
+                    <p className="book-description">{Data.book_description}</p>
+                    <p><b>Language</b>: {Data.language}</p>
+                    <h3>{Data.cost}</h3>
 
                     <a href="#" className="cart-button">Add To Cart</a>
                 </div>

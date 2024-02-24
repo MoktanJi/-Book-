@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.styles.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({ darkTheme }) => {
   return (
@@ -7,8 +8,8 @@ const Navbar = ({ darkTheme }) => {
        <div className="container flex justify-between align-center">
             <a href="#" className="logo">हाम्रो<span className="text-primary"> Book </span> पसल </a>
             <nav className="nav-links-container">
-                <a href="#" className="nav-links">Home</a>
-                <a href="#" className="nav-links">Books</a>
+                <Link to="/"className="nav-links">Home</Link>
+                <Link to="/books" className="nav-links">Books</Link>
             </nav>
        </div>
     </section>

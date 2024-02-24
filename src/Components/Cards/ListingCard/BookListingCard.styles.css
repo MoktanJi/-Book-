@@ -2,23 +2,30 @@
     display: flex;
     justify-content: space-between;
 }
+
 .book-listing-card{
     border: 1px solid black;
-    width: fit-content;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    width: 100%;
+    padding: 2rem 2rem;
     border-radius: 10px;
 }
 
+.book-listing-img-container{
+    width: 100%;
+    height: 15rem;
+    text-align: center;
+}
+
 .book-listing-image{
-    width: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .book-listing-details-container{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding-top: 1rem;
+    min-height: 10rem ;
 }
 
 .author{

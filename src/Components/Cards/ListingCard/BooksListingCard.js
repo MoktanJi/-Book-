@@ -1,22 +1,24 @@
 import React from 'react'
 import  './BookListingCard.styles.css'
-import B1 from '../../../Assets/B1.jpg'
+import { Link } from 'react-router-dom'
 
-const BooksListingCard = () => {
+const BooksListingCard = ({ Data }) => {
   return (
-    <div>
         <div className="book-listing-card">
             <div className="book-listing-img-container">
-                <img src={B1} alt="book-listing-image" className="book-listing-image"/>
+                <img src={Data.book_image} alt="book-listing-image" className="book-listing-image"/>
             </div>
             <div className="book-listing-details-container">
-                <h3>FOURTH WING</h3>
-                <p className="author">REBECCA YARROS</p>
-                <p className="price">Rs. 2,471.17</p>
-                <a href="#" className="button">Button</a>
-            </div>   
+                <h3>{Data.book_name}</h3>
+                <p className="author">{Data.author_name}</p>
+                <p className='price'>{Data.cost}</p>
+                
+            </div> 
+            <div className="card-btn-container">
+                <Link to={`/book-details/${ Data.id }`} className="button">Add To Cart</Link>  
+            </div>  
         </div>
-    </div>
+    
   )
 }
 
