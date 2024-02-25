@@ -13,14 +13,24 @@
     font-weight: 700;
 }
 
+.nav-links-container{
+    padding-top: 1rem;
+}
 
-.nav-links{
+.nav-links, .nav-links-dark{
     color: white;
     text-decoration: none;
     padding-right: 20px;
     font-size: 1.5rem;
     transition: 0.2s ease-in;
+}
 
+.nav-links-dark{
+    color: black;
+}
+
+.nav-links-dark:hover{
+    color: var(--primary-color)
 }
 
 .nav-links:hover{

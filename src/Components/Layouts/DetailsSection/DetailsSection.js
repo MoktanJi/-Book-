@@ -25,7 +25,7 @@ const DetailsSection = () => {
                     <p><b>Language</b>: {Data.language}</p>
                     <h3>{Data.cost}</h3>
 
-                    <a href="#" className="cart-button">Add To Cart</a>
+                    <a href="#" className="button-primary">Add To Cart</a>
                 </div>
             </div>
        </div>
