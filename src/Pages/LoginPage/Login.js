@@ -3,11 +3,30 @@ import './Login.styles.css'
 import Auth from '../../Assets/auth.jpg'
 import Navbar from '../../Components/Layouts/Navbar/Navbar'
 import AuthForm from '../../Components/Fonts/AuthForm/AuthForm'
+import { useState } from 'react'
 
 const Login = () => {
+
+  const [darkMode,changeMode] = useState(false);
+
+  const setDark = () => 
+    {
+      if(window.scrollY==0)
+        {
+          changeMode(false);
+        }
+      else
+        {
+          changeMode(true);
+        }
+
+    }
+window.addEventListener('scroll',setDark);
+
+
   return (
     <React.Fragment>
-        <Navbar darkText={true}/>
+        <Navbar darkTheme={true}/>
         <section className="Login-container">
             <div className="Login-img-container">
                 <img src={Auth} alt="authentication"/>

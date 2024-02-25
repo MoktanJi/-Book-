@@ -4,8 +4,41 @@ import Navbar from '../../Components/Layouts/Navbar/Navbar'
 import SearchInputForm from '../../Components/Fonts/SearchInputForm/SearchInputForm'
 import BookListingAll from '../../Components/Layouts/BookListingAll/BookListingAll'
 import Footer from '../../Components/Layouts/Footer/Footer'
+import { useState } from 'react'
+
+
+
+
+
+
+
 
 const BooksPage = () => {
+
+  const [darkMode,changeMode] = useState(false);
+
+  const setDark = () => 
+    {
+      if(window.scrollY==0)
+        {
+          changeMode(false);
+        }
+      else
+        {
+          changeMode(true);
+        }
+
+    }
+window.addEventListener('scroll',setDark);
+   
+
+
+
+
+
+
+
+
   return (
     <section>
         <Navbar darkTheme={ true }/>

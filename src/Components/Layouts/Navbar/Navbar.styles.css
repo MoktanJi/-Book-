@@ -1,5 +1,5 @@
 .navbar-container{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -38,11 +38,14 @@
 }
 
 .background-dark{
-    background-color: slategray;
+    background-color: rgba(0, 0, 0,0.8);
+    transition: 0.25s ease-in-out;
+
 }
 
 .background-transparent{
     background-color: transparent;
+    transition: 0.25s ease-in-out;
 }
 
 .relative{
