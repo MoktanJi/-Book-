@@ -5,11 +5,11 @@ import BooksPage from "./Pages/BooksPage/BooksPage"
 import BookDetailsPage from "./Pages/BookDetailsPage/BookDetailsPage"
 import Login from "./Pages/LoginPage/Login"
 import SignUp from "./Pages/SignUpPage/SignUp"
-
+import Scroll from "./Components/Utilities/Scroll"
 
 const App = () => {
     return(
-        <div>
+        <Scroll>
             <Routes>
                 <Route path="/" element = {<HomePage/>}/>
                 <Route path="/books" element = {<BooksPage/>}/>
@@ -17,8 +17,7 @@ const App = () => {
                 <Route path="/signup" element={<SignUp/>}/>
                 <Route path="/login" element={<Login/>}/>
             </Routes>
-           
-        </div>
+        </Scroll>    
     )
 }
 

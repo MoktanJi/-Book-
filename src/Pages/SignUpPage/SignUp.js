@@ -18,7 +18,7 @@ const SignUp = () => {
                     <div className="content-wrapper">
                         <h2>SignUp</h2>
                         <p>Create a new account with email and password.</p>
-                        <AuthForm/>
+                        <AuthForm buttonName="SignUp"/>
                     </div>
                 </div>
             </div>
