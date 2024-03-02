@@ -8,8 +8,8 @@ const AuthForm = () => {
             <input type="email" className="form-input" placeholder="Enter Your Email"/>
         </div>
         <div className="form-group">
-            <label>Password</label>
-            <input type="password" className="form-input" placeholder="Enter Your Password"/>
+            <label htmlFor='upass'>Password</label>
+            <input id='upass' type="password" className="form-input" placeholder="Enter Your Password"/>
         </div>
         <div className="form-group">
             <input type="submit" className="button-primary" value="Sign Up"/>

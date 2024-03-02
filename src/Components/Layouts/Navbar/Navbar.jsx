@@ -40,8 +40,7 @@ const Navbar = (pageLocation) => {
             <div className="nav-link-container">
                   <Link to="/" className=''>Home</Link>
                   <Link to="/books" className=''>Books</Link>
-                  <Link to="/login" className=''>Login</Link>
-                  <Link to="/signup" className=''>Sign up</Link>
+                  <Link to="/account" className=''>Account</Link>
             </div>
        </div>
   )

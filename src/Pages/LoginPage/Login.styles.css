@@ -81,7 +81,7 @@
         height:35px;
         border-radius:12px;
         border:none;
-        background-color: BurlyWood;
+        background-color: #deb887;
         border:1px solid BurlyWood;
         color:black;
         cursor: pointer;
@@ -98,8 +98,6 @@
         color:white;
         cursor: pointer;
     }
-
-    
 
 .account-actions-contianer input:hover, .account-actions-contianer input:focus
     {
