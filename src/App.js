@@ -5,13 +5,14 @@ import BooksPage from "./Pages/BooksPage/BooksPage"
 import BookDetailsPage from "./Pages/BookDetailsPage/BookDetailsPage"
 import Login from "./Pages/LoginPage/Login"
 import SignUp from "./Pages/SignUpPage/SignUp"
+import Scroll from "../src/Utilities/Scroll"
 import NotFound from './Pages/NotFoundPage/NotFound'
 import DashMain from "./Pages/DashboardPage/DashMain"
 
 
 const App = () => {
     return(
-        <div>
+        <Scroll>
             <Routes>
                 <Route path="/*" element={<NotFound/>}/>
                 <Route path="/" element = {<HomePage/>}/>
@@ -20,7 +21,7 @@ const App = () => {
                 <Route path="/account" element={<Login/>}/>
                 <Route path="/account/dashboard" element={<DashMain/>}/>
             </Routes>
-        </div>
+        </Scroll>    
     )
 }
 
