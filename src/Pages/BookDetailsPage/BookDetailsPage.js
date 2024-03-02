@@ -6,7 +6,7 @@ import Footer from '../../Components/Layouts/Footer/Footer'
 const BookDetailsPage = () => {
   return (
     <section>
-      <Navbar darkTheme={ true }/>
+      <Navbar/>
       <DetailsSection/>
       <Footer/>
     </section>

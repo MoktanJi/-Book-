@@ -1,54 +1,82 @@
-.navbar-container{
+.navbar-container
+{
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
     z-index: 1;
-    padding: 1rem 0;
-}
-
-.logo{
-    font-size: 3rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.nav-links-container{
-    padding-top: 1rem;
-}
-
-.nav-links, .nav-links-dark{
-    color: white;
-    text-decoration: none;
-    padding-right: 20px;
-    font-size: 1.5rem;
-    transition: 0.2s ease-in;
-}
-
-.nav-links-dark{
-    color: black;
-}
-
-.nav-links-dark:hover{
-    color: var(--primary-color)
-}
-
-.nav-links:hover{
-    color: var(--primary-color)
-}
-
-.background-dark{
-    background-color: rgba(0, 0, 0,0.8);
-    transition: 0.25s ease-in-out;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    height:50px;
+    background-color:black;
 
 }
 
-.background-transparent{
-    background-color: transparent;
-    transition: 0.25s ease-in-out;
+.navbar-container-unscrolled
+    {
+        background-color:transparent;
+        transition: 0.25s ease-in-out;
+    }
+
+
+.logo
+{
+    font-size: 30px;
+    margin-left:30px;
+    
 }
 
-.relative{
-    position: relative !important;
+.logo a
+    {
+        font-weight: 700;
+        color: white;
+        text-decoration:none;
+    }
 
-}
+
+.nav-link-container
+    {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding:10px;
+    }
+
+.nav-link-container a
+    {
+        color:white;
+        padding:1px;
+        box-sizing: border-box;
+        margin:30px;
+        font-size:20px;
+        font-family: Poppins;
+        text-decoration: none;
+        position: relative;
+    }
+
+.nav-link-container a::before
+    {
+        border-bottom:2px solid white;
+        content:"";
+        width:0%;
+        position: absolute;
+        bottom:-1px;
+        left:0px;
+        transition: 0.25s ease-in-out;
+    
+    }
+
+.nav-link-container a:hover:before
+    {
+        width:100%;
+        content:"";
+        transition: width 0.25s ease-in-out;
+    }
+
+
+
+
+

@@ -1,20 +1,31 @@
-.search-input-form-container{
+.search-input-form-container {
     display: flex;
     padding: 1rem;
     background-color: white;
     border-radius: 5px;
     margin-top: 20px;
+    transition: 0.25s ease-in-out;
 }
 
-.search-input{
+.search-input-form-container:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.419);
+}
+
+.search-input {
     flex: 1;
     outline: none;
     border: none;
     font-size: 1.2rem;
     padding-left: 10px;
+    background-color: white;
+
 }
 
-.search-button{
+.search-input::placeholder {
+    font-style: italic;
+}
+
+.search-button {
     padding: 0.5rem 1.2rem;
     border: none;
     background-color: var(--primary-color);
@@ -25,14 +36,14 @@
 
 }
 
-.search-button:hover{
+.search-button:hover {
     background-color: var(--primary-color-bright);
 }
 
-.dark-box-shadow{
+.dark-box-shadow {
     box-shadow: 4px 4px 15px #111;
 }
 
-.light-box-shadow{
+.light-box-shadow {
     box-shadow: 4px 4px 15px #ccc;
 }
