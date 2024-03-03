@@ -12,7 +12,6 @@ import DashMain from "./Pages/DashboardPage/DashMain"
 
 const App = () => {
     return(
-        <Scroll>
             <Routes>
                 <Route path="/*" element={<NotFound/>}/>
                 <Route path="/" element = {<HomePage/>}/>
@@ -21,7 +20,6 @@ const App = () => {
                 <Route path="/account" element={<Login/>}/>
                 <Route path="/account/dashboard" element={<DashMain/>}/>
             </Routes>
-        </Scroll>    
     )
 }
 

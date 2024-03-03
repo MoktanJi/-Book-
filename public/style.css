@@ -1,4 +1,24 @@
-*
-    {
-        font-family: Poppins;
-    }
+:root {
+    --primary-color: BurlyWood;
+    --primary-color-bright: DarkKhaki;
+    --white-color: white;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    scrollbar-width: none;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}

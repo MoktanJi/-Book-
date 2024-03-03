@@ -1,8 +1,9 @@
 .main-container
     {
         display: flex;
+        width: 100vw;
         justify-content: center;
         align-items:center;
-        position: relative;
-        margin-top:80px;
+        position: fixed;
+        height:100vh;
     }
