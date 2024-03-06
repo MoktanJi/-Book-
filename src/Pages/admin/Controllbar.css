@@ -1,25 +1,19 @@
-.controlbar
+.sidebar
     {
-        background-color: royalblue;
-        width:250px;
+        width:15vw;
+        background-color:royalblue;
         height:90vh;
     }
 
-.controlbar a li
+.sidebar a
+    {
+        color:white;
+        text-decoration: none;
+    }
+
+.sidebar li
     {
         list-style:none;
-        height:40px;
-        color:white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding:10px;
+        background-color:aqua;
     }
-
-
-
-.controlbar li:hover
-    {
-        background-color:rgb(0, 38, 154);
-
-    }
-
