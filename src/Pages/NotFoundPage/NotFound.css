@@ -1,9 +1,0 @@
-.main-container
-    {
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-        align-items:center;
-        position: fixed;
-        height:100vh;
-    }
