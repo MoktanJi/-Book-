@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('./main_assets/POPPINS-REGULAR.TTF');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('./main_assets/POPPINS-BOLD.TTF');
+}
+
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url("./main_assets/POPPINS-ITALIC.TTF");
+}
+
+@font-face {
+    font-family: 'Poppins Bold Italic';
+    src: url("./main_assets/POPPINS-BOLDITALIC.TTF");
+}
+
+@font-face {
+    font-family: 'Poppins Semi Bold';
+    src: url("./main_assets/POPPINS-SEMIBOLD.TTF");
+}
+
+@font-face {
+    font-family: 'Poppins Semi Bold Italic';
+    src: url("./main_assets/POPPINS-SEMIBOLDITALIC.TTF");
+}
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Poppins Extra Bold';
+    src: url("./main_assets/POPPINS-EXTRABOLD.TTF");
+}
+
+@font-face {
+    font-family: 'Poppins Extra Bold Italic';
+    src: url("./main_assets/POPPINS-EXTRABOLDITALIC.TTF");
+}
+
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url("./main_assets/POPPINS-ITALIC.TTF");
+}

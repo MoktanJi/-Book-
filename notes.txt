@@ -1,0 +1,5 @@
+Components: 
+    Sale Card
+    Navbar
+    Footer
+    
