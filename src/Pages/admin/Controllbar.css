@@ -1,0 +1,25 @@
+.controlbar
+    {
+        background-color: royalblue;
+        width:250px;
+        height:90vh;
+    }
+
+.controlbar a li
+    {
+        list-style:none;
+        height:40px;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+.controlbar li:hover
+    {
+        background-color:rgb(0, 38, 154);
+
+    }
+

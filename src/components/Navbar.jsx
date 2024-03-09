@@ -25,10 +25,10 @@ function Navbar() {
                             
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Category
+                                    Genre
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><Link to='/category/fiction' className="dropdown-item">Fiction</Link></li>
+                                    <li><Link to='/genre/fiction' className="dropdown-item">Fiction</Link></li>
                                     <li><Link to='' className="dropdown-item">Horror</Link></li>
                                     <li><Link to='' className="dropdown-item">Mystery</Link></li>
                                     <li><Link to='' className="dropdown-item">Romance</Link></li>
