@@ -1,0 +1,24 @@
+.search-form-page {
+    background-color: rgb(45, 28, 28);
+    width: 100%;
+    padding: 10px;
+}
+
+.search-form-page h1 {
+    color: white;
+}
+
+.search-form-container {
+    /* width:50vw; */
+    border: 3px solid rgb(194, 194, 194);
+    padding: 30px;
+}
+
+::placeholder {
+    font-style: italic;
+    font-family: 'Poppins Regular';
+}
+
+label {
+    color: white;
+}
