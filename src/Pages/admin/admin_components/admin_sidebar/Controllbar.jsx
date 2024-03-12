@@ -35,9 +35,9 @@ function Controllbar(userData) {
                         <a href='#searchbook'><li><ion-icon name="book-outline"/>Search Book</li></a>
                         <a href='#deletebook'><li><ion-icon name="book-outline"/>Delete Book</li></a>
                         <div className='section-title'>Staff Section</div>
-                        <a href='/admin/addbook'><li><ion-icon name="book-outline"/>Add Staff</li></a>
-                        <a href='/admin/addbook'><li><ion-icon name="book-outline"/>Edit Staff</li></a>
-                        <a href='/admin/addbook'><li><ion-icon name="book-outline"/>Delete Staff</li></a>
+                        <a href='#addstaff'><li><ion-icon name="book-outline"/>Add Staff</li></a>
+                        <a href='#editstaff'><li><ion-icon name="book-outline"/>Edit Staff</li></a>
+                        <a href='#deletestaff'><li><ion-icon name="book-outline"/>Delete Staff</li></a>
                         <div className='section-title'>Sales Section</div>
                         <a href='/admin/addbook'><li><ion-icon name="book-outline"/><span class="badge text-bg-success">15</span>Pending Orders</li></a>
                     </div>

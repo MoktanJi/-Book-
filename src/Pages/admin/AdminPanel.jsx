@@ -10,6 +10,8 @@ import EditBook from "./admin_forms/EditBook";
 import SearchBook from "./admin_forms/SearchBook";
 import DeleteBook from "./admin_forms/DeleteBook";
 
+import AddStaff from './admin_forms/AddStaff'
+
 
 function AdminPanel(UserData) {
     const navlink = useParams();
@@ -17,13 +19,16 @@ function AdminPanel(UserData) {
         <>
             <div className="admin-panel">
                 <div className="admin-controller">
-                    <Controllbar navlink='' user_image={userImg} user_name="Umang Shrestha" user_designation='C.T.O' />
+                    {/* <Controllbar navlink='' user_image={userImg} user_name="Umang Shrestha" user_designation='C.T.O & Co-Founder' /> */}
+                    <Controllbar navlink='' user_image={userImg} user_name="Umang Shrestha" user_designation='C.T.O & Co-Founder' />
                 </div>
                 <div className="admin-action-container">
                         <section id="addbook"><AddBook /></section>
                         <section id="editbook"><EditBook /></section>
                         <section id="searchbook"><SearchBook/></section>
                         <section id="deletebook"><DeleteBook/></section>
+
+                        <section id="addstaff"><AddStaff/></section>
                 </div>
             </div>
 
