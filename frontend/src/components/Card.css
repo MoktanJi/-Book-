@@ -1,0 +1,22 @@
+.card-container
+    {
+        width: 250px;
+        display: grid;
+    }
+.card img
+    {
+        height:300px;
+    }
+
+.card button
+    {
+        width: 100%;
+    }
+
+.book-details, .card-title
+    {
+        text-overflow: ellipsis;
+        word-wrap: none;
+        overflow: hidden;
+        white-space: nowrap;
+    }
