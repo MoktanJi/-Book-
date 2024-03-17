@@ -11,7 +11,7 @@ function AddBook() {
     const [inpGENRE, setGENRE] = useState("");
     const [inpQUANTITY, setQUANTITY] = useState("");
     const [inpPRICE, setPRICE] = useState("");
-    const [inpFILE, setFILE] = useState("");
+    const [inpFILE, setFILE] = useState(null);
 
 
     const handleISBN = (e) => {
@@ -39,7 +39,8 @@ function AddBook() {
     }
 
     const handleFILE = (e) => {
-        setFILE(e.target.value);
+        setFILE(e.target.files[0]);
+
     }
 
     const clearINP = () => {
@@ -52,28 +53,29 @@ function AddBook() {
         setFILE("");
     }
 
-const deliverDATA = async () =>
-    {
+    const deliverDATA = async () => {
+        const formData = new FormData();
+        formData.append('image', inpFILE);
+        let mediaRESP = await fetch("http://127.0.0.1:8000/api/addbookimage", { method: "POST", body: formData });
+        let mediaPATH = await mediaRESP.json();
+        console.log(mediaPATH.path);
+
         var data =
-                    {
-                        "b_isbn":inpISBN,
-                        "b_name":inpNAME,
-                        "b_author":inpAUTHOR,
-                        "b_genre":inpGENRE,
-                        "b_quantity":inpQUANTITY,
-                        "b_price":inpPRICE,
-                        "b_image":inpFILE
-                    };
+        {
+            "b_isbn": inpISBN,
+            "b_name": inpNAME,
+            "b_author": inpAUTHOR,
+            "b_genre": inpGENRE,
+            "b_quantity": inpQUANTITY,
+            "b_price": inpPRICE,
+            "b_image":mediaPATH.path
+        };
         var jsonDATA = JSON.stringify(data);
-        console.log(jsonDATA);
-        alert(inpFILE);
-        
-        let resp = await fetch("http://127.0.0.1:8000/api/addbook",{method:"POST",headers:{'Content-Type':'application/json'},body:jsonDATA});
-        let message = await resp.json();
-        console.log(message);
+
+        let dataRESP = await fetch("http://127.0.0.1:8000/api/addbook", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: jsonDATA });
+        let dataMSG = await dataRESP.json();
+        console.log("DELIVER DATA"+dataMSG);
     }
-
-
 
     return (
         <div className='add-form-page'>
@@ -124,7 +126,7 @@ const deliverDATA = async () =>
 
                 <div className=" form-group col-md-4 my-4">
                     <label htmlFor="formFileMultiple" className="form-label">Upload Photo of Book Cover</label>
-                    <input className="form-control" onChange={handleFILE} value={inpFILE} accept='.jpg , .png' type="file" id="formFileMultiple" multiple />
+                    <input className="form-control" onChange={handleFILE} accept='.jpg , .png' type="file" id="formFileMultiple" />
                 </div>
 
 

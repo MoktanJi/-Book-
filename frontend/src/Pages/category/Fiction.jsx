@@ -49,7 +49,7 @@ function Fiction() {
 
                         {
                             data.map((i) =>
-                                            <Card book_id={i.book_id} book_image={emage} book_title={i.book_name} book_author={i.book_author} book_genre={i.book_genre} book_stock={i.book_quantity} book_price={i.book_price} />
+                                            <Card book_id={i.book_id} book_image={i.book_image} book_title={i.book_name} book_author={i.book_author} book_genre={i.book_genre} book_stock={i.book_quantity} book_price={i.book_price} />
                                     )
                         }
                         {/* <Card book_id={"1"} book_image={emage} book_title={"Title"} book_author="Lekhak" book_genre="Fiction" book_stock={123} book_price={11400}/> */}

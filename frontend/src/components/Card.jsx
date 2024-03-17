@@ -10,7 +10,8 @@ var id = useParams();
         <>
             <div className="card-container">
                 <div className="card" styles="width: 15rem;">
-                    <Link to='/book-details/:id'><img src={Data.book_image} className="card-img-top" alt="..." /></Link>
+                    {/* <Link to='/book-details/:id'><img src={Data.book_image} className="card-img-top" alt="..." /></Link> */}
+                    <img src={Data.book_image} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h4 className="card-title">{Data.book_title}</h4>
                         <div className="book-details">Author: {Data.book_author}</div>

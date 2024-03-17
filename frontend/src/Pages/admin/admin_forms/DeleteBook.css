@@ -20,6 +20,6 @@
     font-family: 'Poppins Regular';
 }
 
-label {
-    color: white;
+.delete-form-page label {
+    color: rgb(210, 3, 3);
 }

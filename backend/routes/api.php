@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\MediaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/addbook',[BookController::class,'addbook']);
 Route::get('/getbook',[BookController::class,'getbook']);
 
+
+Route::post('/addbookimage',[MediaController::class,'addBookImage']);
