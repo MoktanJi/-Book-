@@ -1,0 +1,16 @@
+.card-holder
+    {
+        overflow-y:hidden;
+        overflow-x:scroll;
+        scrollbar-width:none;
+    }
+.card-holder h1
+    {
+        text-align: center;
+        background-color:rgb(132, 132, 132);
+    }
+
+.card-container
+    {
+        flex-shrink: 0;
+    }
