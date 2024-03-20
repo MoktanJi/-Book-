@@ -26,3 +26,16 @@
         font-family:'Poppins Italic';
         font-size:18px;
     }
+
+.cards
+    {
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+    }
+
+.cards
+    {
+        flex-shrink:0;
+    }
+

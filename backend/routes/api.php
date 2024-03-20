@@ -22,8 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
-Route::post('/addbook',[BookController::class,'addbook']);
 Route::get('/getbook',[BookController::class,'getbook']);
+Route::get('/getPopular',[BookController::class,'getPopular']);
+
+Route::put('/addbook',[BookController::class,'addbook']);
+Route::patch('/editbook',[BookController::class,'editbook']);
+Route::post('/searchbook',[BookController::class,'searchbook']);
 
 
 Route::post('/addbookimage',[MediaController::class,'addBookImage']);

@@ -10,8 +10,9 @@ class MediaController extends Controller
     {
         if($request->hasFile('image')) {
             $image = $request->file('image');
-            $image->move(public_path('uploads/book_images'), $image->getClientOriginalName());
-            $path = "http://".request()->getHttpHost()."/uploads/book_images/".$image->getClientOriginalName();
+            $newImgName = time().".".$image->getClientOriginalExtension();
+            $image->move(public_path('uploads/book_images'),$newImgName);
+            $path = "http://".request()->getHttpHost()."/uploads/book_images/".$newImgName;
             return response()->json(["status"=>"SUCCESS","path"=>$path]);
         }
 

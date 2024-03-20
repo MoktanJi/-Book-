@@ -5,18 +5,13 @@ import { useState } from 'react';
 function AddBook() {
 
 
-    const [inpISBN, setISBN] = useState("");
     const [inpNAME, setNAME] = useState("");
     const [inpAUTHOR, setAUTHOR] = useState("");
     const [inpGENRE, setGENRE] = useState("");
+    const [inpPOPULAR, setPOPULAR] = useState(false);
     const [inpQUANTITY, setQUANTITY] = useState("");
     const [inpPRICE, setPRICE] = useState("");
     const [inpFILE, setFILE] = useState(null);
-
-
-    const handleISBN = (e) => {
-        setISBN(e.target.value);
-    }
 
     const handleNAME = (e) => {
         setNAME(e.target.value);
@@ -29,6 +24,12 @@ function AddBook() {
     const handleGENRE = (e) => {
         setGENRE(e.target.value);
     }
+    const handlePOPULAR = (e) =>
+        {
+            setPOPULAR(e.target.checked);
+            console.log(!inpPOPULAR);
+        }
+    
 
     const handleQUANTITY = (e) => {
         setQUANTITY(e.target.value);
@@ -44,13 +45,13 @@ function AddBook() {
     }
 
     const clearINP = () => {
-        setISBN("");
         setNAME("");
         setAUTHOR("");
         setGENRE("");
         setQUANTITY("");
+        setPOPULAR(false);
         setPRICE("");
-        setFILE("");
+        setFILE(null);
     }
 
     const deliverDATA = async () => {
@@ -62,19 +63,21 @@ function AddBook() {
 
         var data =
         {
-            "b_isbn": inpISBN,
             "b_name": inpNAME,
             "b_author": inpAUTHOR,
             "b_genre": inpGENRE,
             "b_quantity": inpQUANTITY,
             "b_price": inpPRICE,
-            "b_image":mediaPATH.path
+            "b_popular": inpPOPULAR,
+            "b_image": mediaPATH.path
         };
         var jsonDATA = JSON.stringify(data);
 
-        let dataRESP = await fetch("http://127.0.0.1:8000/api/addbook", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: jsonDATA });
+        let dataRESP = await fetch("http://127.0.0.1:8000/api/addbook", { method: "PUT", headers: { 'Content-Type': 'application/json' }, body: jsonDATA });
         let dataMSG = await dataRESP.json();
-        console.log("DELIVER DATA"+dataMSG);
+        // alert("The Book ID is = "+dataMSG.id[0].book_id);
+        alert("This book ID is = " + dataMSG.data.book_id);
+        clearINP();
     }
 
     return (
@@ -82,10 +85,6 @@ function AddBook() {
             <h1 className='m-4'>Add Book</h1>
             <div className="add-form-container m-4">
                 <div className="form-row">
-                    <div className="form-group col-md-3 my-4">
-                        <label>Book ISBN</label>
-                        <input name='b_isbn' type="text" value={inpISBN} onChange={handleISBN} className="form-control" placeholder="Unique ISBN of Book" />
-                    </div>
                     <div className="form-group col-md-3 my-4">
                         <label>Book Name</label>
                         <input type="text" value={inpNAME} onChange={handleNAME} className="form-control" placeholder="Title of the Book" />
@@ -109,6 +108,9 @@ function AddBook() {
                         </select>
                     </div>
                 </div>
+                    <input onChange={handlePOPULAR} value={inpPOPULAR} type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" />
+                    <label class="btn btn-outline-success" for="btncheck1">Popular</label>
+
                 <div className="form-group">
                     <div className="form-group col-md-2 my-4">
                         <label htmlFor="inputEmail4">Book Quantity</label>

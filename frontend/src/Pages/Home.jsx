@@ -1,6 +1,8 @@
 import React from "react";
 import './Home.css';
 
+import HorizontalHomeCard from './category/HorizontalHomeCard'
+import Footer from './category/Footer'
 
 function Home() {
     return (
@@ -12,9 +14,9 @@ function Home() {
                 </div>
 
             </div>
-
+                <HorizontalHomeCard/>
+                <Footer/>
         </>
-
     );
 }
 

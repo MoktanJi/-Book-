@@ -28,11 +28,11 @@ function Navbar() {
                                     Genre
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><Link to='/genre/fiction' className="dropdown-item">Fiction</Link></li>
-                                    <li><Link to='' className="dropdown-item">Horror</Link></li>
-                                    <li><Link to='' className="dropdown-item">Mystery</Link></li>
-                                    <li><Link to='' className="dropdown-item">Romance</Link></li>
-                                    <li><Link to='' className="dropdown-item">Thriller</Link></li>
+                                    <li><a href='/genre/fiction' className="dropdown-item">Fiction</a></li>
+                                    <li><a href='/genre/horror' className="dropdown-item">Horror</a></li>
+                                    <li><a href='/genre/mystery' className="dropdown-item">Mystery</a></li>
+                                    <li><a href='/genre/romance' className="dropdown-item">Romance</a></li>
+                                    <li><a href='/genre/thriller' className="dropdown-item">Thriller</a></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" href="#">Books Archive</a></li>
                                 </ul>
